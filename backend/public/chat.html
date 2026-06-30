@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+
+        <button onclick="goBack()">← Back</button>
+
+        <h2 id="chatName"></h2>
+
+    </div>
+
+    <div id="messages" class="messages"></div>
+
+    <p id="typingStatus"
+       style="padding:0 20px 10px;color:gray;font-style:italic;">
+    </p>
+
+    <div class="chat-input">
+
+       <div class="chat-input">
+
+    <input
+        type="file"
+        id="image"
+        accept="image/*"
+        hidden>
+
+    <button onclick="document.getElementById('image').click()">
+        📎
+    </button>
+
+    <input
+        type="text"
+        id="message"
+        placeholder="Type a message...">
+
+    <button onclick="sendMessage()">
+        Send
+    </button>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+<script src="js/chat.js"></script>
+
+</body>
+
+</html>
